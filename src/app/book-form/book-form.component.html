@@ -1,0 +1,28 @@
+<h1 style="display: flex">
+    Add a book to the library:
+</h1>
+<form>
+    <app-labeled-input
+        label="Book name"
+        type="text" />
+
+    <h3>Author</h3>
+    <div class="author-form">
+        <app-labeled-input label="Author name" type="text"/>
+        <app-labeled-input label="Date of Birth" type="date"/>
+        <app-labeled-input label="Date of Death" type="date"/>
+        <!-- <app-dynamic-input-list>
+            
+        </app-dynamic-input-list> -->
+    </div>
+    
+    <h3>Publication</h3>
+    <div class="publication-form">
+        <app-labeled-input label="Publisher Name"   type="text" />
+        <app-labeled-input label="Publisher Locale" type="text" />
+        <app-labeled-input label="Edition"          type="number" />
+        <app-labeled-input label="Copyright"        type="date" />
+    </div>
+    
+    <input type="submit" />
+</form>

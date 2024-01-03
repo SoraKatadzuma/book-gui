@@ -1,0 +1,9 @@
+:host(.labeled-input) {
+    display: flex;
+}
+
+.label-input-label {
+    display: inline-block;
+    margin-right: 5px;
+    min-width: 10.0rem;
+}

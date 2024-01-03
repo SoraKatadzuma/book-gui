@@ -1,0 +1,35 @@
+<div class="data-bank">
+    <div *ngFor="let bookData of bookDataBank;" class="book-card">
+        <header class="book-card-header">
+            <span class="heading">{{bookData.name}}</span>
+            <div class="button-group">
+                <button>edit</button>
+                <button (click)="deleteBook(bookData.id!)">delete</button>
+            </div>
+        </header>
+        <div *ngFor="let author of bookData.authors">
+            <span class="subheading indented">
+                {{author.fullName}}
+            </span>
+            <span class="subheading-date">
+                ({{getBirthYear(author.dateOfBirth)}} to {{getDeathYear(author.dateOfDeath)}})
+            </span>
+            <div *ngFor="let pseudonym of author.pseudonyms">
+                <span class="subsubheading indented">a.k.a. {{pseudonym}}</span>
+            </div>
+        </div>
+        <br/>
+        <span class="book-secondary">Publications</span>
+        <div *ngFor="let publication of bookData.publications">
+            <span class="subheading indented">
+                {{publication.publisher.name}}
+            </span>
+            <span>
+                ({{publication.publisher.locale}})
+            </span>
+            <span>
+                on {{publication.copyright}}
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<ul class="tab-list">
+    <li class="tab-elem"
+        *ngFor="let tab of tabsArray;let tabIndex = index;"
+        (click)="setTab(tabIndex)"
+    >
+        <a class="tab-link"
+            [ngClass]="activeTab === tabIndex ? 'active' : ''"
+        >{{tab}}</a>
+    </li>
+</ul>
